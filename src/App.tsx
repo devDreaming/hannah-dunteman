@@ -1,12 +1,15 @@
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Tailwind Is Working
-      </h1>
+    <main className="font-sans text-gray-900">
+      <Hero />
+      <Projects />
+      <Contact />
     </main>
   );
 }
 
 export default App;
-
