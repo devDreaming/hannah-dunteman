@@ -47,12 +47,14 @@ export default function Hero({ isScrolled }: HeroProps) {
                   : `text-5xl md:text-6xl ${textColor} mb-4`
               }`}
             >
-              Your Name
+              Hannah Dunteman <span className={subtitleColor}>| Frontend Developer</span>
             </h1>
             {!isScrolled && (
-              <p className={`text-xl ${subtitleColor} mb-8 animate-fade-in`}>
-                Full Stack Developer | React Specialist
-              </p>
+              <>
+                <p className={`text-lg ${subtitleColor} mb-8 animate-fade-in opacity-80`}>
+                  Lets build something beautiful and functional
+                </p>
+              </>
             )}
           </div>
 

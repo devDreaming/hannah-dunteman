@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 
 export default function Contact() {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
+  const [copied, setCopied] = useState(false);
+
+  const email = 'hannah.dunteman@gmail.com';
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   
   return (
     <section id="contact" className={`py-20 scroll-mt-20 ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
@@ -13,10 +23,22 @@ export default function Contact() {
 
         <div className="max-w-2xl mx-auto">
           <div className={`rounded-lg shadow-md p-8 ${isDark ? 'bg-gray-900' : 'bg-blue-50'}`}>
-            <p className={`mb-8 text-center ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
+            <p className={`mb-4 text-center ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+              The next step in our journey awaits
             </p>
+            <div className="relative flex justify-center">
+              <p
+                onClick={copyEmail}
+                className={`text-center cursor-pointer ${isDark ? 'text-indigo-300' : 'text-blue-600'}`}
+              >
+                {email}
+              </p>
+              {copied && (
+                <span className={`absolute -top-8 px-2 py-1 text-sm rounded ${isDark ? 'bg-gray-700 text-white' : 'bg-gray-800 text-white'}`}>
+                  Copied!
+                </span>
+              )}
+            </div>
 
 
             <div className={`mt-8 pt-8 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>

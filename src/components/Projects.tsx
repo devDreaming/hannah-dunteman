@@ -6,28 +6,20 @@ export default function Projects() {
   
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Plant Favorites',
       description:
-        'A full-featured online store with cart functionality, payment integration, and admin dashboard.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-      link: '#',
-      github: '#',
+        'Frontend single page application for searching and favoriting plants.',
+      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+      link: 'https://devdreaming.github.io/plant-favorites/',
+      github: 'https://github.com/devDreaming/plant-favorites',
     },
     {
-      title: 'Task Management App',
+      title: 'What\'s For Dinner',
       description:
-        'Collaborative task manager with real-time updates, drag-and-drop interface, and team features.',
-      technologies: ['React', 'Firebase', 'Tailwind CSS'],
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Weather Dashboard',
-      description:
-        'Beautiful weather application with location-based forecasts, interactive maps, and historical data.',
-      technologies: ['React', 'TypeScript', 'OpenWeather API'],
-      link: '#',
-      github: '#',
+        'Full stack application that utilizes Anthropic AI to help pick dinner options.',
+      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express', 'Node.js', 'Anthropic AI'],
+      link: 'https://whats-for-dinner.up.railway.app/',
+      github: 'https://github.com/devDreaming/whats-for-dinner',
     },
   ];
 
@@ -35,10 +27,10 @@ export default function Projects() {
     <section id="projects" className={`py-20 scroll-mt-20 ${isDark ? 'bg-gray-900' : 'bg-stone-50'}`}>
       <div className="container mx-auto px-6">
         <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
-          Featured Projects
+          Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -73,6 +65,7 @@ export default function Projects() {
               <div className="flex gap-4">
                 <a
                   href={project.link}
+                  target="_blank"
                   className={`font-medium ${
                     isDark
                       ? 'text-indigo-400 hover:text-indigo-300'
@@ -81,16 +74,19 @@ export default function Projects() {
                 >
                   Live Demo →
                 </a>
-                <a
-                  href={project.github}
-                  className={`font-medium ${
-                    isDark
-                      ? 'text-gray-400 hover:text-gray-300'
-                      : 'text-gray-600 hover:text-gray-700'
-                  }`}
-                >
-                  GitHub →
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className={`font-medium ${
+                      isDark
+                        ? 'text-gray-400 hover:text-gray-300'
+                        : 'text-gray-600 hover:text-gray-700'
+                    }`}
+                  >
+                    GitHub →
+                  </a>
+                )}
               </div>
             </div>
           ))}
