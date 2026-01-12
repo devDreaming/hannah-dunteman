@@ -47,7 +47,7 @@ export default function Hero({ isScrolled }: HeroProps) {
                   : `text-5xl md:text-6xl ${textColor} mb-4`
               }`}
             >
-              Hannah Dunteman <span className={subtitleColor}>| Frontend Developer</span>
+              Hannah Dunteman {!isScrolled && <span className={subtitleColor}>| Frontend Developer</span>}
             </h1>
             {!isScrolled && (
               <>
