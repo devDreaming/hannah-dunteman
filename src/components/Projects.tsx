@@ -9,7 +9,7 @@ export default function Projects() {
       title: 'Plant Favorites',
       tagline: 'Personal Project - Built with AI',
       description:
-        'Frontend single page application for searching and favoriting plants.',
+        'Frontend single page application for searching and favoriting plants',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
       link: 'https://devdreaming.github.io/plant-favorites/',
       github: 'https://github.com/devDreaming/plant-favorites',
@@ -18,7 +18,7 @@ export default function Projects() {
       title: 'What\'s For Dinner',
       tagline: 'Personal Project - Built with AI',
       description:
-        'Full stack application that utilizes Anthropic AI to help pick dinner options.',
+        'Full stack application that utilizes Anthropic AI to help pick dinner options',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express', 'Node.js', 'Anthropic AI'],
       link: 'https://whats-for-dinner.up.railway.app/',
       github: 'https://github.com/devDreaming/whats-for-dinner',
@@ -27,7 +27,7 @@ export default function Projects() {
       title: 'Daily Audio Bible',
       tagline: 'Client Project',
       description:
-        'Implemented a full site redesign, rebuild menu, Added functionality to account pages which included a wallet, donation management, and using graphQL and websockets to update information between apps',
+        'Implemented a full site redesign, rebuilt menu, and added functionality to account pages which included a wallet, donation management, and using graphQL and websockets to update information between apps',
       technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'Websockets'],
       link: 'https://dailyaudiobible.com/',
       github: '',
@@ -36,7 +36,7 @@ export default function Projects() {
       title: 'Rock Paper Scissors Game',
       tagline: 'Personal Project - Built from scratch',
       description:
-        'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques.',
+        'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
       technologies: ['HTML', 'CSS', 'Javascript'],
       link: 'https://devdreaming.github.io/rock-paper-scissors/',
       github: 'https://github.com/devDreaming/rock-paper-scissors',
@@ -45,7 +45,7 @@ export default function Projects() {
       title: 'Landing Page',
       tagline: 'Personal Project - Built from scratch',
       description:
-        'A static landing page that demonstrates the expansive abilities of plain HTML and SCSS.',
+        'A static landing page that demonstrates the expansive abilities of plain HTML and SCSS',
       technologies: ['HTML', 'SCSS'],
       link: 'https://devdreaming.github.io/natourslandingpage/',
       github: 'https://github.com/devDreaming/natourslandingpage',
