@@ -7,6 +7,7 @@ export default function Projects() {
   const projects = [
     {
       title: 'Plant Favorites',
+      tagline: 'Personal Project - Built with AI',
       description:
         'Frontend single page application for searching and favoriting plants.',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
@@ -15,11 +16,39 @@ export default function Projects() {
     },
     {
       title: 'What\'s For Dinner',
+      tagline: 'Personal Project - Built with AI',
       description:
         'Full stack application that utilizes Anthropic AI to help pick dinner options.',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express', 'Node.js', 'Anthropic AI'],
       link: 'https://whats-for-dinner.up.railway.app/',
       github: 'https://github.com/devDreaming/whats-for-dinner',
+    },
+    {
+      title: 'Daily Audio Bible',
+      tagline: 'Client Project',
+      description:
+        'Implemented a full site redesign, rebuild menu, Added functionality to account pages which included a wallet, donation management, and using graphQL and websockets to update information between apps',
+      technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'Websockets'],
+      link: 'https://dailyaudiobible.com/',
+      github: '',
+    },
+    {
+      title: 'Rock Paper Scissors Game',
+      tagline: 'Personal Project - Built from scratch',
+      description:
+        'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques.',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      link: 'https://devdreaming.github.io/rock-paper-scissors/',
+      github: 'https://github.com/devDreaming/rock-paper-scissors',
+    },
+    {
+      title: 'Landing Page',
+      tagline: 'Personal Project - Built from scratch',
+      description:
+        'A static landing page that demonstrates the expansive abilities of plain HTML and SCSS.',
+      technologies: ['HTML', 'SCSS'],
+      link: 'https://devdreaming.github.io/natourslandingpage/',
+      github: 'https://github.com/devDreaming/natourslandingpage',
     },
   ];
 
@@ -30,7 +59,7 @@ export default function Projects() {
           Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -40,9 +69,12 @@ export default function Projects() {
                   : 'bg-blue-50 border-gray-200'
               }`}
             >
-              <h3 className={`text-2xl font-semibold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+              <h3 className={`text-2xl font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {project.title}
               </h3>
+              <p className={`text-sm mb-3 ${isDark ? 'text-indigo-400' : 'text-blue-600'}`}>
+                {project.tagline}
+              </p>
               <p className={`mb-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 {project.description}
               </p>
