@@ -6,13 +6,13 @@ export default function Projects() {
   
   const projects = [
     {
-      title: 'Plant Favorites',
+      title: 'Modern Dentist',
       tagline: 'Personal Project - Built with AI',
       description:
-        'Frontend single page application for searching and favoriting plants',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-      link: 'https://devdreaming.github.io/plant-favorites/',
-      github: 'https://github.com/devDreaming/plant-favorites',
+        'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      link: 'https://modern-dentist.vercel.app/',
+      github: 'https://github.com/devDreaming/modern-dentist',
     },
     {
       title: 'What\'s For Dinner',
@@ -31,6 +31,15 @@ export default function Projects() {
       technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'Websockets'],
       link: 'https://dailyaudiobible.com/',
       github: '',
+    },
+    {
+      title: 'Plant Favorites',
+      tagline: 'Personal Project - Built with AI',
+      description:
+        'Frontend single page application for searching and favoriting plants',
+      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+      link: 'https://devdreaming.github.io/plant-favorites/',
+      github: 'https://github.com/devDreaming/plant-favorites',
     },
     {
       title: 'Rock Paper Scissors Game',
