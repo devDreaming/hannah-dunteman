@@ -3,14 +3,15 @@ import StarryNight from './StarryNight';
 import ThemeToggle from './ThemeToggle';
 
 interface HeroProps {
-  isScrolled: boolean;
+  scrollProgress: number;
 }
 
-export default function Hero({ isScrolled }: HeroProps) {
+export default function Hero({ scrollProgress }: HeroProps) {
   const { theme } = useTheme();
-  
+
   const isDark = theme === 'dark';
-  
+  const isCollapsed = scrollProgress >= 1;
+
   // Different gradients for dark and light modes
   const heroGradient = isDark
     ? 'bg-gradient-to-b from-indigo-950 via-indigo-900 to-purple-900'
@@ -23,42 +24,52 @@ export default function Hero({ isScrolled }: HeroProps) {
   const textColor = isDark ? 'text-white' : 'text-white';
   const subtitleColor = isDark ? 'text-indigo-200' : 'text-yellow-50';
 
+  // Interpolate height from 100vh down to auto (using padding)
+  // Content fades out starting at 30% scroll progress
+  const contentOpacity = Math.max(0, 1 - scrollProgress * 2.5);
+  const heroHeight = `${100 - scrollProgress * 100}vh`;
+  const minHeight = isCollapsed ? 'auto' : heroHeight;
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? `${headerGradient} shadow-lg py-4`
-          : `${heroGradient} py-32`
+      className={`fixed top-0 left-0 right-0 z-50 ${isCollapsed ? headerGradient : heroGradient} ${
+        isCollapsed ? 'shadow-lg' : ''
       }`}
+      style={{
+        minHeight: isCollapsed ? undefined : minHeight,
+        display: 'flex',
+        alignItems: 'center',
+        padding: isCollapsed ? '1rem 0' : undefined,
+      }}
     >
-      {!isScrolled && isDark && <StarryNight />}
-      
-      <div className={`container mx-auto px-6 relative z-10`}>
+      {!isCollapsed && isDark && <StarryNight />}
+
+      <div className="container mx-auto px-6 relative z-10 w-full">
         <div
-          className={`transition-all duration-300 ${
-            isScrolled ? 'flex items-center justify-between' : 'text-center'
+          className={`transition-all duration-100 ${
+            isCollapsed ? 'flex items-center justify-between' : 'text-center'
           }`}
         >
           <div>
             <h1
-              className={`font-bold transition-all duration-300 ${
-                isScrolled
-                  ? `text-2xl ${textColor}`
-                  : `text-5xl md:text-6xl ${textColor} mb-4`
-              }`}
+              className={`font-bold ${textColor} ${isCollapsed ? 'text-2xl' : ''}`}
+              style={{
+                fontSize: isCollapsed ? undefined : `${3.75 - scrollProgress * 2.25}rem`,
+              }}
             >
-              Hannah Dunteman {!isScrolled && <span className={subtitleColor}>| Frontend Developer</span>}
+              Hannah Dunteman {!isCollapsed && <span className={subtitleColor} style={{ opacity: contentOpacity }}>| Full Stack Developer</span>}
             </h1>
-            {!isScrolled && (
-              <>
-                <p className={`text-lg ${subtitleColor} mb-8 animate-fade-in opacity-80`}>
-                  Lets build something beautiful and functional
-                </p>
-              </>
+            {!isCollapsed && contentOpacity > 0 && (
+              <p
+                className={`text-lg ${subtitleColor} mb-8 opacity-80`}
+                style={{ opacity: contentOpacity * 0.8 }}
+              >
+                Lets build something beautiful and functional
+              </p>
             )}
           </div>
 
-          {isScrolled && (
+          {isCollapsed && (
             <nav className="flex gap-6 items-center">
               <a
                 href="#projects"
@@ -77,9 +88,9 @@ export default function Hero({ isScrolled }: HeroProps) {
           )}
         </div>
 
-        {!isScrolled && (
-          <>
-            <div className="flex justify-center gap-4 animate-fade-in mb-8">
+        {!isCollapsed && (
+          <div style={{ opacity: contentOpacity, pointerEvents: contentOpacity < 0.1 ? 'none' : undefined }}>
+            <div className="flex justify-center gap-4 mb-8">
               <a
                 href="#projects"
                 className={`px-8 py-3 rounded-lg font-semibold transition-colors ${
@@ -101,11 +112,11 @@ export default function Hero({ isScrolled }: HeroProps) {
                 Get in Touch
               </a>
             </div>
-            
+
             <div className="flex justify-center">
               <ThemeToggle />
             </div>
-          </>
+          </div>
         )}
       </div>
     </header>

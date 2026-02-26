@@ -5,13 +5,15 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 function AppContent() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 100);
+      // Progress from 0 (top) to 1 (fully collapsed) over 400px of scroll
+      const progress = Math.min(scrollPosition / 400, 1);
+      setScrollProgress(progress);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -20,8 +22,8 @@ function AppContent() {
 
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
-      <Hero isScrolled={isScrolled} />
-      <main className="relative z-10 pt-[500px]">
+      <Hero scrollProgress={scrollProgress} />
+      <main className="relative z-10 pt-[100vh]">
         <Projects />
         <Contact />
       </main>

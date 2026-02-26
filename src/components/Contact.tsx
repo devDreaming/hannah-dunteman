@@ -1,81 +1,75 @@
-import { useState } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeContext';
 
 export default function Contact() {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
-  const [copied, setCopied] = useState(false);
 
-  const email = 'hannah.dunteman@gmail.com';
-
-  const copyEmail = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  
   return (
-    <section id="contact" className={`py-20 scroll-mt-20 ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
-      <div className="container mx-auto px-6">
+    <section
+      id="contact"
+      className={`py-20 scroll-mt-20 h-[calc(100vh-4rem)] relative overflow-hidden ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}skyline-dark.svg`}
+        alt=""
+        className="absolute bottom-0 left-0 right-0 h-screen w-full pointer-events-none object-contain object-bottom"
+        style={{ opacity: isDark ? 0.15 : 0.1, height: '60%' }}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
           Get In Touch
         </h2>
 
         <div className="max-w-2xl mx-auto">
-          <div className={`rounded-lg shadow-md p-8 ${isDark ? 'bg-gray-900' : 'bg-blue-50'}`}>
-            <p className={`mb-4 text-center ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+          <div className={`rounded-lg shadow-md p-8 border ${
+                isDark 
+                  ? 'border-gray-700' 
+                  :  'border-gray-200'
+              }`}>
+            <p className={`mb-4 text-center text-xl ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
               The next step in our journey awaits
             </p>
-            <div className="relative flex justify-center">
-              <p
-                onClick={copyEmail}
-                className={`text-center cursor-pointer ${isDark ? 'text-indigo-300' : 'text-blue-600'}`}
-              >
-                {email}
-              </p>
-              {copied && (
-                <span className={`absolute -top-8 px-2 py-1 text-sm rounded ${isDark ? 'bg-gray-700 text-white' : 'bg-gray-800 text-white'}`}>
-                  Copied!
-                </span>
-              )}
-            </div>
 
-
-            <div className={`mt-8 pt-8 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
+            <div className={`mt-6 pt-6 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
               <div className="flex justify-center gap-6">
                 <a
                   href="https://github.com/devDreaming"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`transition-colors ${
+                  aria-label="GitHub"
+                  className={`text-2xl transition-colors ${
                     isDark
-                      ? 'text-gray-400 hover:text-indigo-400'
+                      ? 'text-white hover:text-indigo-400'
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
                 >
-                  GitHub
+                  <FaGithub />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/hannah-dunteman/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`transition-colors ${
+                  aria-label="LinkedIn"
+                  className={`text-2xl transition-colors ${
                     isDark
-                      ? 'text-gray-400 hover:text-indigo-400'
+                      ? 'text-white hover:text-indigo-400'
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
                 >
-                  LinkedIn
+                  <FaLinkedin />
                 </a>
                 <a
                   href="mailto:hannah.dunteman@gmail.com"
-                  className={`transition-colors ${
+                  aria-label="Email"
+                  className={`text-2xl transition-colors ${
                     isDark
-                      ? 'text-gray-400 hover:text-indigo-400'
+                      ? 'text-white hover:text-indigo-400'
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
                 >
-                  Email
+                  <HiOutlineMail />
                 </a>
               </div>
             </div>
