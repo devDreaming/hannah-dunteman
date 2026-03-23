@@ -7,7 +7,7 @@ export default function Projects() {
   const projects = [
     {
       title: 'Modern Dentist',
-      tagline: 'Personal Project - Built with AI',
+      tagline: 'Personal Project',
       description:
         'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
       technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
@@ -16,12 +16,21 @@ export default function Projects() {
     },
     {
       title: 'What\'s For Dinner',
-      tagline: 'Personal Project - Built with AI',
+      tagline: 'Personal Project',
       description:
         'Full stack application that utilizes Anthropic AI to help pick dinner options',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express', 'Node.js', 'Anthropic AI'],
       link: 'https://whats-for-dinner.up.railway.app/',
       github: 'https://github.com/devDreaming/whats-for-dinner',
+    },
+    {
+      title: 'Accessible Component Library',
+      tagline: 'Personal Project',
+      description:
+        'A showcase of accessible UI components',
+      technologies: ['HTML', 'ARIA', 'CSS Tokens', 'React', 'Vite'],
+      link: 'https://devdreaming.github.io/accessible-components/',
+      github: 'https://github.com/devDreaming/accessible-components',
     },
     {
       title: 'Daily Audio Bible',
@@ -34,25 +43,25 @@ export default function Projects() {
     },
     {
       title: 'Plant Favorites',
-      tagline: 'Personal Project - Built with AI',
+      tagline: 'Personal Project',
       description:
         'Frontend single page application for searching and favoriting plants',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
       link: 'https://devdreaming.github.io/plant-favorites/',
       github: 'https://github.com/devDreaming/plant-favorites',
     },
-    {
-      title: 'Rock Paper Scissors Game',
-      tagline: 'Personal Project - Built from scratch',
-      description:
-        'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
-      technologies: ['HTML', 'CSS', 'Javascript'],
-      link: 'https://devdreaming.github.io/rock-paper-scissors/',
-      github: 'https://github.com/devDreaming/rock-paper-scissors',
-    },
+    // {
+    //   title: 'Rock Paper Scissors Game',
+    //   tagline: 'Personal Project',
+    //   description:
+    //     'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
+    //   technologies: ['HTML', 'CSS', 'Javascript'],
+    //   link: 'https://devdreaming.github.io/rock-paper-scissors/',
+    //   github: 'https://github.com/devDreaming/rock-paper-scissors',
+    // },
     {
       title: 'Landing Page',
-      tagline: 'Personal Project - Built from scratch',
+      tagline: 'Personal Project',
       description:
         'A static landing page that demonstrates the expansive abilities of plain HTML and SCSS',
       technologies: ['HTML', 'SCSS'],

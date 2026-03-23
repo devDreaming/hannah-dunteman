@@ -39,12 +39,11 @@ export default function Hero({ scrollProgress }: HeroProps) {
         minHeight: isCollapsed ? undefined : minHeight,
         display: 'flex',
         alignItems: 'center',
-        padding: isCollapsed ? '1rem 0' : undefined,
       }}
     >
       {!isCollapsed && isDark && <StarryNight />}
 
-      <div className="container mx-auto px-6 relative z-10 w-full">
+      <div className="container mx-auto p-6 relative z-10 w-full">
         <div
           className={`transition-all duration-100 ${
             isCollapsed ? 'flex items-center justify-between' : 'text-center'
@@ -55,6 +54,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
               className={`font-bold ${textColor} ${isCollapsed ? 'text-2xl' : ''}`}
               style={{
                 fontSize: isCollapsed ? undefined : `${3.75 - scrollProgress * 2.25}rem`,
+                textAlign: isCollapsed ? undefined : (scrollProgress > 0 ? 'left' : 'center'),
               }}
             >
               Hannah Dunteman {!isCollapsed && <span className={subtitleColor} style={{ opacity: contentOpacity }}>| Full Stack Developer</span>}

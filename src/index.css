@@ -23,11 +23,11 @@
   }
   
   .animate-shooting-star {
-    animation: shootingStar 3s linear infinite;
+    animation: shootingStar 12s linear infinite;
   }
-  
+
   .animate-shooting-star-delayed {
-    animation: shootingStar 4s linear infinite 8s;
+    animation: shootingStar 8s linear infinite 8s;
   }
   
   .animate-pulse-slow {
@@ -76,10 +76,15 @@
 @keyframes shootingStar {
   0% {
     transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(0) translateY(0);
     opacity: 1;
   }
-  70% {
-    opacity: 1;
+  25% {
+    transform: translateX(-300px) translateY(300px);
+    opacity: 0;
   }
   100% {
     transform: translateX(-300px) translateY(300px);

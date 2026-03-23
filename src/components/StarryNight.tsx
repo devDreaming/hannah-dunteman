@@ -57,7 +57,7 @@ export default function StarryNight() {
       ))}
       
       {/* Shooting stars */}
-      <div className="absolute top-1/4 right-1/4 animate-shooting-star">
+      <div className="absolute -top-4 -right-4 animate-shooting-star">
         <div className="w-1 h-1 bg-white rounded-full shadow-shooting-star" />
       </div>
       <div className="absolute top-1/3 left-1/3 animate-shooting-star-delayed">
