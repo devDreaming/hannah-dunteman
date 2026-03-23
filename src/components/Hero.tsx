@@ -93,7 +93,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
             <div className="flex justify-center gap-4 mb-8">
               <a
                 href="#projects"
-                className={`px-8 py-3 rounded-lg font-semibold transition-colors ${
+                className={`px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                   isDark
                     ? 'bg-white text-indigo-900 hover:bg-indigo-100'
                     : 'bg-white text-orange-600 hover:bg-orange-50'

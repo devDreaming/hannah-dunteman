@@ -77,13 +77,13 @@ export default function Projects() {
           Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" style={{ gridAutoRows: '1fr' }}>
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`rounded-lg p-6 hover:shadow-lg transition-shadow border ${
-                isDark 
-                  ? 'bg-gray-800 border-gray-700' 
+              className={`rounded-lg p-6 hover:shadow-lg transition-shadow border flex flex-col ${
+                isDark
+                  ? 'bg-gray-800 border-gray-700'
                   : 'bg-blue-50 border-gray-200'
               }`}
             >
@@ -112,7 +112,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-auto">
                 <a
                   href={project.link}
                   target="_blank"
