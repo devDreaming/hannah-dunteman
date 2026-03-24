@@ -6,15 +6,6 @@ export default function Projects() {
   
   const projects = [
     {
-      title: 'Modern Dentist',
-      tagline: 'Personal Project',
-      description:
-        'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
-      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-      link: 'https://modern-dentist.vercel.app/',
-      github: 'https://github.com/devDreaming/modern-dentist',
-    },
-    {
       title: 'What\'s For Dinner',
       tagline: 'Personal Project',
       description:
@@ -33,32 +24,41 @@ export default function Projects() {
       github: 'https://github.com/devDreaming/accessible-components',
     },
     {
+      title: 'Modern Dentist',
+      tagline: 'Personal Project',
+      description:
+        'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      link: 'https://modern-dentist.vercel.app/',
+      github: 'https://github.com/devDreaming/modern-dentist',
+    },
+    {
       title: 'Daily Audio Bible',
       tagline: 'Client Project',
       description:
-        'Implemented a full site redesign, rebuilt menu, and added functionality to account pages which included a wallet, donation management, and using graphQL and websockets to update information between apps',
+        'Implemented a full site redesign, rebuilt menu, added account page wallet and donation management, used graphQL and websockets to sync information between apps',
       technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'Websockets'],
       link: 'https://dailyaudiobible.com/',
       github: '',
     },
-    {
-      title: 'Plant Favorites',
-      tagline: 'Personal Project',
-      description:
-        'Frontend single page application for searching and favoriting plants',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-      link: 'https://devdreaming.github.io/plant-favorites/',
-      github: 'https://github.com/devDreaming/plant-favorites',
-    },
     // {
-    //   title: 'Rock Paper Scissors Game',
+    //   title: 'Plant Favorites',
     //   tagline: 'Personal Project',
     //   description:
-    //     'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
-    //   technologies: ['HTML', 'CSS', 'Javascript'],
-    //   link: 'https://devdreaming.github.io/rock-paper-scissors/',
-    //   github: 'https://github.com/devDreaming/rock-paper-scissors',
+    //     'Frontend single page application for searching and favoriting plants',
+    //   technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    //   link: 'https://devdreaming.github.io/plant-favorites/',
+    //   github: 'https://github.com/devDreaming/plant-favorites',
     // },
+    {
+      title: 'Rock Paper Scissors Game',
+      tagline: 'Personal Project',
+      description:
+        'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      link: 'https://devdreaming.github.io/rock-paper-scissors/',
+      github: 'https://github.com/devDreaming/rock-paper-scissors',
+    },
     {
       title: 'Landing Page',
       tagline: 'Personal Project',
@@ -97,7 +97,7 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
@@ -112,7 +112,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex gap-4 mt-auto">
+              <div className="flex gap-4 ">
                 <a
                   href={project.link}
                   target="_blank"

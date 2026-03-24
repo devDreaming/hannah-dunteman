@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import StarryNight from './StarryNight';
 import ThemeToggle from './ThemeToggle';
@@ -8,6 +9,7 @@ interface HeroProps {
 
 export default function Hero({ scrollProgress }: HeroProps) {
   const { theme } = useTheme();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const isDark = theme === 'dark';
   const isCollapsed = scrollProgress >= 1;
@@ -70,46 +72,93 @@ export default function Hero({ scrollProgress }: HeroProps) {
           </div>
 
           {isCollapsed && (
-            <nav className="flex gap-6 items-center">
-              <a
-                href="#projects"
-                className={`${textColor} hover:opacity-80 transition-opacity`}
+            <>
+              {/* Desktop nav */}
+              <nav className="hidden md:flex gap-6 items-center">
+                <a
+                  href="#about"
+                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                >
+                  About
+                </a>
+                <a
+                  href="#projects"
+                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                >
+                  Projects
+                </a>
+                <a
+                  href="#contact"
+                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                >
+                  Contact
+                </a>
+                <ThemeToggle />
+              </nav>
+
+              {/* Mobile hamburger */}
+              <button
+                className="md:hidden flex flex-col justify-center gap-1.5 p-2"
+                onClick={() => setMenuOpen((prev) => !prev)}
+                aria-label="Toggle menu"
               >
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className={`${textColor} hover:opacity-80 transition-opacity`}
-              >
-                Contact
-              </a>
-              <ThemeToggle />
-            </nav>
+                <span className={`block w-6 h-0.5 ${isDark ? 'bg-white' : 'bg-white'} transition-transform ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                <span className={`block w-6 h-0.5 ${isDark ? 'bg-white' : 'bg-white'} transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
+                <span className={`block w-6 h-0.5 ${isDark ? 'bg-white' : 'bg-white'} transition-transform ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              </button>
+            </>
           )}
         </div>
+
+        {isCollapsed && menuOpen && (
+          <nav className="md:hidden flex flex-col gap-4 pt-4 pb-2">
+            <a
+              href="#about"
+              className={`${textColor} hover:opacity-80 transition-opacity`}
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </a>
+            <a
+              href="#projects"
+              className={`${textColor} hover:opacity-80 transition-opacity`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className={`${textColor} hover:opacity-80 transition-opacity`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </a>
+            <ThemeToggle />
+          </nav>
+        )}
 
         {!isCollapsed && (
           <div style={{ opacity: contentOpacity, pointerEvents: contentOpacity < 0.1 ? 'none' : undefined }}>
             <div className="flex justify-center gap-4 mb-8">
               <a
-                href="#projects"
+                href="#about"
                 className={`px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                   isDark
                     ? 'bg-white text-indigo-900 hover:bg-indigo-100'
                     : 'bg-white text-orange-600 hover:bg-orange-50'
                 }`}
               >
-                View Projects
+                About Me
               </a>
               <a
-                href="#contact"
+                href="#projects"
                 className={`border-2 border-white ${textColor} px-8 py-3 rounded-lg font-semibold transition-colors ${
                   isDark
                     ? 'hover:bg-white hover:text-indigo-900'
                     : 'hover:bg-white hover:text-orange-600'
                 }`}
               >
-                Get in Touch
+                View Projects
               </a>
             </div>
 
