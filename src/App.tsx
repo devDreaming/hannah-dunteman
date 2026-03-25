@@ -22,7 +22,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-800' : 'bg-blue-50'}`}>
       <Hero scrollProgress={scrollProgress} />
       <main className="relative z-10 pt-[100vh]">
         <About />

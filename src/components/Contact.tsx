@@ -23,7 +23,7 @@ export default function Contact() {
         </h2>
 
         <div className="max-w-2xl mx-auto">
-          <div className={`rounded-lg shadow-md p-8 border ${
+          <div className={`rounded-lg shadow-md p-6 border ${
                 isDark 
                   ? 'border-gray-700' 
                   :  'border-gray-200'
