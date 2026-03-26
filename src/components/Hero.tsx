@@ -82,6 +82,12 @@ export default function Hero({ scrollProgress }: HeroProps) {
                   About
                 </a>
                 <a
+                  href="#skills"
+                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                >
+                  Skills
+                </a>
+                <a
                   href="#projects"
                   className={`${textColor} hover:opacity-80 transition-opacity`}
                 >
@@ -118,6 +124,13 @@ export default function Hero({ scrollProgress }: HeroProps) {
               onClick={() => setMenuOpen(false)}
             >
               About
+            </a>
+            <a
+              href="#skills"
+              className={`${textColor} hover:opacity-80 transition-opacity`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Skills
             </a>
             <a
               href="#projects"
