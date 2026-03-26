@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
@@ -22,10 +23,11 @@ function AppContent() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-800' : 'bg-blue-50'}`}>
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
       <Hero scrollProgress={scrollProgress} />
       <main className="relative z-10 pt-[100vh]">
         <About />
+        <Skills />
         <Projects />
         <Contact />
       </main>

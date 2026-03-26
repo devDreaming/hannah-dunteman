@@ -1,0 +1,108 @@
+import { useTheme } from '../context/ThemeContext';
+
+// Light tints along the hero gradient: gold → peach → rose
+const lightSkillColors = [
+  '#fff4d6', '#fff0cc', '#ffecc2', '#ffe8ba', '#ffe3b5',
+  '#ffdeb0', '#ffd9ad', '#ffd4ab', '#ffcfaa', '#ffcaab',
+  '#ffc5ad', '#ffc0b0', '#ffbbb4', '#ffb6b7', '#ffb2ba',
+  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2',
+];
+
+// Dark tints along the hero gradient: indigo → purple
+const darkSkillColors = [
+  '#1e1b4b', '#241e52', '#2a2159', '#302460', '#362768',
+  '#3c2a6f', '#422d76', '#48307d', '#4c3382', '#503687',
+  '#54398b', '#563c8e', '#573f90', '#574290', '#57458e',
+  '#57488c', '#574b8a', '#602f9f', '#581c87',
+];
+
+const skillGroups = [
+  {
+    label: 'Languages',
+    skills: ['Javascript', 'TypeScript', 'HTML', 'CSS', 'PHP'],
+  },
+  {
+    label: 'Frameworks & Libraries',
+    skills: ['React', 'Next.js', 'Laravel', 'jQuery', 'Node.js', 'Express'],
+  },
+  {
+    label: 'Styling & UI',
+    skills: ['Tailwind', 'Bootstrap', 'ARIA', 'Figma'],
+  },
+  {
+    label: 'Tools & Workflow',
+    skills: ['Claude Code', 'Vite', 'Lighthouse', 'Agile'],
+  },
+];
+
+export default function Skills() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
+  let colorIndex = 0;
+
+  return (
+    <section id="skills" className={`relative py-20 scroll-mt-20 overflow-hidden min-h-[calc(100vh-4rem)] ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}>
+      {/* Decorative gradient line on the left */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-1"
+        style={{
+          background: isDark
+            ? 'linear-gradient(to bottom, #6366f1, #8b5cf6, #6366f1)'
+            : 'linear-gradient(to bottom, #ffce6f, #f4a6aa, #ffce6f)',
+        }}
+      />
+
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+        <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
+          Skills
+        </h2>
+
+        <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
+          {skillGroups.map((group) => (
+            <div
+              key={group.label}
+              className="flex flex-col md:flex-row items-start gap-6"
+            >
+              {/* Group label */}
+              <div className="md:w-48 flex-shrink-0">
+                <h3
+                  className="text-lg font-bold uppercase tracking-widest bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: isDark
+                      ? 'linear-gradient(135deg, #818cf8, #a78bfa)'
+                      : 'linear-gradient(135deg, #f6b57e, #f4a6aa)',
+                  }}
+                >
+                  {group.label}
+                </h3>
+              </div>
+
+              {/* Skills */}
+              <div className="flex flex-wrap gap-3 flex-1">
+                {group.skills.map((skill) => {
+                  const colors = isDark ? darkSkillColors : lightSkillColors;
+                  const bg = colors[colorIndex % colors.length];
+                  colorIndex++;
+                  return (
+                    <span
+                      key={skill}
+                      className={`px-5 py-2.5 rounded-xl text-md font-medium transition-transform hover:scale-105 hover:shadow-md ${
+                        isDark
+                          ? 'text-gray-200'
+                          : 'text-gray-800'
+                      }`}
+                      style={{ backgroundColor: bg }}
+                    >
+                      {skill}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
