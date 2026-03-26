@@ -3,15 +3,15 @@ import { useTheme } from '../context/ThemeContext';
 const accomplishments = [
   {
     number: '01',
-    text: <>Implemented a complete redesign of a browser extension using <em>React</em>, <em>TypeScript</em>, and <em>Vite</em>, reducing load times and improving user satisfaction</>,
+    text: <>I implemented a complete redesign of a browser extension using <em>React</em>, <em>TypeScript</em>, and <em>Vite</em>, reducing load times and improving user satisfaction</>,
   },
   {
     number: '02',
-    text: <>Assisted in the end-to-end rebuilding of the company's software infrastructure with <em>Laravel</em>, <em>PHP</em>, <em>jQuery</em>, and <em>CSS</em>, resulting in improved system reliability, and faster page loads</>,
+    text: <>I assisted in the end-to-end rebuilding of the company's software infrastructure with <em>Laravel</em>, <em>PHP</em>, <em>jQuery</em>, and <em>CSS</em>, resulting in improved system reliability, and faster page loads</>,
   },
   {
     number: '03',
-    text: <>Led a team of two interns through the full development lifecycle of a website, successfully launching the project on schedule while building team capacity and technical skills</>,
+    text: <>I led a team of two interns through the full development lifecycle of a website, successfully launching the project on schedule while building team capacity and technical skills</>,
   },
 ];
 
@@ -80,14 +80,14 @@ export default function About() {
                   </span> software development has been my art
               </p>
               <p className="mb-4">
-                I always strive for the <span className="bg-clip-text text-transparent" style={{
+                I have always strived for the <span className="bg-clip-text text-transparent" style={{
                     backgroundImage: isDark
                         ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
                         : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
                   }}>highest quality work</span>
               </p>
               <p>
-                I believe that good code performs well, is easy to understand and creates a UI that is both <span className="bg-clip-text text-transparent" style={{
+                I believe in crafting good code that performs well, is easy to understand and creates a UI that is both <span className="bg-clip-text text-transparent" style={{
                     backgroundImage: isDark
                         ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
                         : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
