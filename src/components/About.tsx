@@ -3,15 +3,15 @@ import { useTheme } from '../context/ThemeContext';
 const accomplishments = [
   {
     number: '01',
-    text: <>I implemented a complete redesign of a browser extension using <em>React</em>, <em>TypeScript</em>, and <em>Vite</em>, reducing load times and improving user satisfaction</>,
+    text: <>Rebuilt a browser extension's frontend using <em>React</em>, <em>TypeScript</em>, and <em>Vite</em>, reducing load times and improving user experience</>,
   },
   {
     number: '02',
-    text: <>I assisted in the end-to-end rebuilding of the company's software infrastructure with <em>Laravel</em>, <em>PHP</em>, <em>jQuery</em>, and <em>CSS</em>, resulting in improved system reliability, and faster page loads</>,
+    text: <>Implemented account management features, including wallet and donation functionality, using <em>GraphQL</em> and <em>WebSockets</em> to enable real-time data synchronization</>,
   },
   {
     number: '03',
-    text: <>I led a team of two interns through the full development lifecycle of a website, successfully launching the project on schedule while building team capacity and technical skills</>,
+    text: <>Modernized a <em>React</em> application by migrating from Redux to <em>Apollo Client</em>, reducing code complexity and improving state management and API performance</>,
   },
 ];
 

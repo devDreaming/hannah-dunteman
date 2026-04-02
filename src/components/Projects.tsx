@@ -10,7 +10,7 @@ export default function Projects() {
       tagline: 'Personal Project',
       description:
         'Full stack application that utilizes Anthropic AI to help pick dinner options',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express', 'Node.js', 'Anthropic AI'],
+      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Express', 'Node.js', 'Anthropic AI'],
       link: 'https://whats-for-dinner.up.railway.app/',
       github: 'https://github.com/devDreaming/whats-for-dinner',
     },
@@ -28,7 +28,7 @@ export default function Projects() {
       tagline: 'Personal Project',
       description:
         'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
-      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
       link: 'https://modern-dentist.vercel.app/',
       github: 'https://github.com/devDreaming/modern-dentist',
     },
@@ -46,7 +46,7 @@ export default function Projects() {
     //   tagline: 'Personal Project',
     //   description:
     //     'Frontend single page application for searching and favoriting plants',
-    //   technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    //   technologies: ['React', 'TypeScript', 'Vite', 'Tailwind'],
     //   link: 'https://devdreaming.github.io/plant-favorites/',
     //   github: 'https://github.com/devDreaming/plant-favorites',
     // },

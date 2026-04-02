@@ -1,11 +1,12 @@
 import { useTheme } from '../context/ThemeContext';
+import GrowingVine from './GrowingVine';
 
 // Light tints along the hero gradient: gold → peach → rose
 const lightSkillColors = [
   '#fff4d6', '#fff0cc', '#ffecc2', '#ffe8ba', '#ffe3b5',
   '#ffdeb0', '#ffd9ad', '#ffd4ab', '#ffcfaa', '#ffcaab',
   '#ffc5ad', '#ffc0b0', '#ffbbb4', '#ffb6b7', '#ffb2ba',
-  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2',
+  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2', '#ff9dc4',
 ];
 
 // Dark tints along the hero gradient: indigo → purple
@@ -13,17 +14,17 @@ const darkSkillColors = [
   '#1e1b4b', '#241e52', '#2a2159', '#302460', '#362768',
   '#3c2a6f', '#422d76', '#48307d', '#4c3382', '#503687',
   '#54398b', '#563c8e', '#573f90', '#574290', '#57458e',
-  '#57488c', '#574b8a', '#602f9f', '#581c87',
+  '#57488c', '#574b8a', '#602f9f', '#581c87', '#4c1d95',
 ];
 
 const skillGroups = [
   {
     label: 'Languages',
-    skills: ['Javascript', 'TypeScript', 'HTML', 'CSS', 'PHP'],
+    skills: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'PHP'],
   },
   {
     label: 'Frameworks & Libraries',
-    skills: ['React', 'Next.js', 'Laravel', 'jQuery', 'Node.js', 'Express'],
+    skills: ['React', 'Next.js', 'Laravel', 'jQuery', 'Node.js', 'Express', 'GraphQL'],
   },
   {
     label: 'Styling & UI',
@@ -43,22 +44,14 @@ export default function Skills() {
 
   return (
     <section id="skills" className={`relative py-20 scroll-mt-20 overflow-hidden min-h-[calc(100vh-4rem)] ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}>
-      {/* Decorative gradient line on the left */}
-      <div
-        className="absolute left-0 top-0 bottom-0 w-1"
-        style={{
-          background: isDark
-            ? 'linear-gradient(to bottom, #6366f1, #8b5cf6, #6366f1)'
-            : 'linear-gradient(to bottom, #ffce6f, #f4a6aa, #ffce6f)',
-        }}
-      />
+      <GrowingVine isDark={isDark} />
 
-      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
           Skills
         </h2>
 
-        <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 max-w-5xl mx-auto">
           {skillGroups.map((group) => (
             <div
               key={group.label}
