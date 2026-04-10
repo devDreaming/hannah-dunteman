@@ -6,7 +6,7 @@ const lightSkillColors = [
   '#fff4d6', '#fff0cc', '#ffecc2', '#ffe8ba', '#ffe3b5',
   '#ffdeb0', '#ffd9ad', '#ffd4ab', '#ffcfaa', '#ffcaab',
   '#ffc5ad', '#ffc0b0', '#ffbbb4', '#ffb6b7', '#ffb2ba',
-  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2', '#ff9dc4',
+  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2', '#ff9dc4', '#ff99c6', '#ff95c8',
 ];
 
 // Dark tints along the hero gradient: indigo → purple
@@ -14,7 +14,7 @@ const darkSkillColors = [
   '#1e1b4b', '#241e52', '#2a2159', '#302460', '#362768',
   '#3c2a6f', '#422d76', '#48307d', '#4c3382', '#503687',
   '#54398b', '#563c8e', '#573f90', '#574290', '#57458e',
-  '#57488c', '#574b8a', '#602f9f', '#581c87', '#4c1d95',
+  '#57488c', '#574b8a', '#602f9f', '#581c87', '#4c1d95', '#3b0764', '#2e0654',
 ];
 
 const skillGroups = [
@@ -28,11 +28,11 @@ const skillGroups = [
   },
   {
     label: 'Styling & UI',
-    skills: ['Tailwind', 'Bootstrap', 'ARIA', 'Figma'],
+    skills: ['CSS Tokens', 'Tailwind', 'Bootstrap', 'ARIA', 'Figma'],
   },
   {
     label: 'Tools & Workflow',
-    skills: ['Claude Code', 'Vite', 'Lighthouse', 'Agile'],
+    skills: ['Claude Code', 'Vite', 'Jest', 'Lighthouse', 'Agile'],
   },
 ];
 

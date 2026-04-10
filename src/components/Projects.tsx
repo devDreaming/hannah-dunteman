@@ -28,7 +28,7 @@ export default function Projects() {
       tagline: 'Personal Project',
       description:
         'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
-      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Jest'],
       link: 'https://modern-dentist.vercel.app/',
       github: 'https://github.com/devDreaming/modern-dentist',
     },
@@ -37,19 +37,19 @@ export default function Projects() {
       tagline: 'Client Project',
       description:
         'Implemented a full site redesign, rebuilt menu, added account page wallet and donation management, used graphQL and websockets to sync information between apps',
-      technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'Websockets'],
+      technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'WebSockets'],
       link: 'https://dailyaudiobible.com/',
       github: '',
     },
-    // {
-    //   title: 'Plant Favorites',
-    //   tagline: 'Personal Project',
-    //   description:
-    //     'Frontend single page application for searching and favoriting plants',
-    //   technologies: ['React', 'TypeScript', 'Vite', 'Tailwind'],
-    //   link: 'https://devdreaming.github.io/plant-favorites/',
-    //   github: 'https://github.com/devDreaming/plant-favorites',
-    // },
+    {
+      title: 'Plant Favorites',
+      tagline: 'Personal Project',
+      description:
+        'Frontend single page application for searching and favoriting plants',
+      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind', 'API Integration'],
+      link: 'https://devdreaming.github.io/plant-favorites/',
+      github: 'https://github.com/devDreaming/plant-favorites',
+    },
     {
       title: 'Rock Paper Scissors Game',
       tagline: 'Personal Project',
@@ -59,15 +59,15 @@ export default function Projects() {
       link: 'https://devdreaming.github.io/rock-paper-scissors/',
       github: 'https://github.com/devDreaming/rock-paper-scissors',
     },
-    {
-      title: 'Landing Page',
-      tagline: 'Personal Project',
-      description:
-        'A static landing page that demonstrates the expansive abilities of plain HTML and SCSS',
-      technologies: ['HTML', 'SCSS'],
-      link: 'https://devdreaming.github.io/natourslandingpage/',
-      github: 'https://github.com/devDreaming/natourslandingpage',
-    },
+    // {
+    //   title: 'Landing Page',
+    //   tagline: 'Personal Project',
+    //   description:
+    //     'A static landing page that demonstrates the expansive abilities of plain HTML and SCSS',
+    //   technologies: ['HTML', 'SCSS'],
+    //   link: 'https://devdreaming.github.io/natourslandingpage/',
+    //   github: 'https://github.com/devDreaming/natourslandingpage',
+    // },
   ];
 
   return (
