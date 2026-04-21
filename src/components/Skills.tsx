@@ -6,15 +6,17 @@ const lightSkillColors = [
   '#fff4d6', '#fff0cc', '#ffecc2', '#ffe8ba', '#ffe3b5',
   '#ffdeb0', '#ffd9ad', '#ffd4ab', '#ffcfaa', '#ffcaab',
   '#ffc5ad', '#ffc0b0', '#ffbbb4', '#ffb6b7', '#ffb2ba',
-  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2', '#ff9dc4', '#ff99c6', '#ff95c8',
+  '#ffadbd', '#ffa9bf', '#ffa5c0', '#ffa1c2', '#ff9dc4',
+  '#ff99c6', '#ff95c8', '#ff91ca', '#ff8dcc', '#ff89ce',
 ];
 
 // Dark tints along the hero gradient: indigo → purple
 const darkSkillColors = [
   '#1e1b4b', '#241e52', '#2a2159', '#302460', '#362768',
   '#3c2a6f', '#422d76', '#48307d', '#4c3382', '#503687',
-  '#54398b', '#563c8e', '#573f90', '#574290', '#57458e',
-  '#57488c', '#574b8a', '#602f9f', '#581c87', '#4c1d95', '#3b0764', '#2e0654',
+  '#2d2175', '#3a1c78', '#45187a', '#4a1c7e', '#441f7c',
+  '#3d2478', '#574b8a', '#602f9f', '#581c87', '#4c1d95',
+  '#3b0764', '#2e0654', '#270554', '#210453', '#1b0352',
 ];
 
 const skillGroups = [
@@ -24,15 +26,19 @@ const skillGroups = [
   },
   {
     label: 'Frameworks & Libraries',
-    skills: ['React', 'Next.js', 'Laravel', 'jQuery', 'Node.js', 'Express', 'GraphQL'],
+    skills: ['React', 'Next.js', 'Laravel', 'jQuery', 'Node.js', 'Express'],
   },
   {
     label: 'Styling & UI',
     skills: ['CSS Tokens', 'Tailwind', 'Bootstrap', 'ARIA', 'Figma'],
   },
   {
+    label: 'Data & APIs',
+    skills: ['GraphQL', 'Apollo Client', 'Prisma', 'API Integration'],
+  },
+  {
     label: 'Tools & Workflow',
-    skills: ['Claude Code', 'Vite', 'Jest', 'Lighthouse', 'Agile'],
+    skills: ['Claude Code', 'Vite', 'Testing', 'Lighthouse', 'Agile'],
   },
 ];
 
@@ -43,7 +49,7 @@ export default function Skills() {
   let colorIndex = 0;
 
   return (
-    <section id="skills" className={`relative py-20 scroll-mt-20 overflow-hidden min-h-[calc(100vh-4rem)] ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}>
+    <section id="skills" className={`relative py-20 scroll-mt-20 overflow-hidden min-h-[calc(100vh-4rem)] ${isDark ? 'bg-gray-900' : 'bg-stone-50'}`}>
       <GrowingVine isDark={isDark} />
 
       <div className="container mx-auto px-6 relative z-10">

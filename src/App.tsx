@@ -27,8 +27,8 @@ function AppContent() {
       <Hero scrollProgress={scrollProgress} />
       <main className="relative z-10 pt-[100vh]">
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
     </div>

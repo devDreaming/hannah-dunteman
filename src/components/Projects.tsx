@@ -6,6 +6,15 @@ export default function Projects() {
   
   const projects = [
     {
+      title: 'Watchlist',
+      tagline: 'Personal Project',
+      description:
+        "A full-stack Movie & TV Show watchlist app. Search for movies and TV shows, track what you want to watch, what you're currently watching, and rate what you complete.",
+      technologies: ['React', 'TypeScript', 'Vite', 'CSS Tokens', 'Apollo Client', 'Prisma', 'GraphQL', 'React Testing Library', 'API Integration'],
+      link: 'https://watchlist-client-production.up.railway.app/',
+      github: 'https://github.com/devDreaming/watchlist',
+    },
+    {
       title: 'What\'s For Dinner',
       tagline: 'Personal Project',
       description:
@@ -13,15 +22,6 @@ export default function Projects() {
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Express', 'Node.js', 'Anthropic AI'],
       link: 'https://whats-for-dinner.up.railway.app/',
       github: 'https://github.com/devDreaming/whats-for-dinner',
-    },
-    {
-      title: 'Accessible Component Library',
-      tagline: 'Personal Project',
-      description:
-        'A showcase of accessible UI components',
-      technologies: ['HTML', 'ARIA', 'CSS Tokens', 'React', 'Vite'],
-      link: 'https://devdreaming.github.io/accessible-components/',
-      github: 'https://github.com/devDreaming/accessible-components',
     },
     {
       title: 'Modern Dentist',
@@ -42,6 +42,15 @@ export default function Projects() {
       github: '',
     },
     {
+      title: 'Accessible Component Library',
+      tagline: 'Personal Project',
+      description:
+        'A showcase of accessible UI components',
+      technologies: ['HTML', 'ARIA', 'CSS Tokens', 'React', 'Vite'],
+      link: 'https://devdreaming.github.io/accessible-components/',
+      github: 'https://github.com/devDreaming/accessible-components',
+    },
+    {
       title: 'Plant Favorites',
       tagline: 'Personal Project',
       description:
@@ -50,15 +59,15 @@ export default function Projects() {
       link: 'https://devdreaming.github.io/plant-favorites/',
       github: 'https://github.com/devDreaming/plant-favorites',
     },
-    {
-      title: 'Rock Paper Scissors Game',
-      tagline: 'Personal Project',
-      description:
-        'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
-      technologies: ['HTML', 'CSS', 'Javascript'],
-      link: 'https://devdreaming.github.io/rock-paper-scissors/',
-      github: 'https://github.com/devDreaming/rock-paper-scissors',
-    },
+    // {
+    //   title: 'Rock Paper Scissors Game',
+    //   tagline: 'Personal Project',
+    //   description:
+    //     'A small game application that implements simple, straightforward gaming mechanics while utilizing clean and semantic coding techniques',
+    //   technologies: ['HTML', 'CSS', 'Javascript'],
+    //   link: 'https://devdreaming.github.io/rock-paper-scissors/',
+    //   github: 'https://github.com/devDreaming/rock-paper-scissors',
+    // },
     // {
     //   title: 'Landing Page',
     //   tagline: 'Personal Project',
@@ -71,7 +80,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className={`py-20 scroll-mt-20 ${isDark ? 'bg-gray-900' : 'bg-stone-50'}`}>
+    <section id="projects" className={`py-20 scroll-mt-20 ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}>
       <div className="container mx-auto px-6">
         <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
           Projects
@@ -83,8 +92,8 @@ export default function Projects() {
               key={index}
               className={`rounded-lg p-6 hover:shadow-lg transition-shadow border flex flex-col ${
                 isDark
-                  ? 'bg-gray-800 border-gray-700'
-                  : 'bg-blue-50 border-gray-200'
+                  ? 'bg-gray-900 border-gray-950'
+                  : 'bg-stone-50 border-gray-200'
               }`}
             >
               <h3 className={`text-2xl font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
