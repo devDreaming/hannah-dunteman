@@ -23,53 +23,56 @@ export default function Contact() {
         </h2>
 
         <div className="max-w-2xl mx-auto">
-          <div className={`rounded-lg shadow-md p-6 border ${
-                isDark 
-                  ? 'border-gray-700' 
-                  :  'border-gray-200'
+          <div className={`rounded-lg shadow-md p-6 border backdrop-blur-sm ${
+                isDark
+                  ? 'bg-gray-900/80 border-gray-700'
+                  : 'bg-white/80 border-gray-200'
               }`}>
             <p className={`mb-4 text-center text-xl ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
               The next step in our journey awaits
             </p>
 
             <div className={`mt-6 pt-6 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-              <div className="flex justify-center gap-6">
+              <div className="flex flex-col gap-4 items-start w-fit mx-auto">
                 <a
                   href="https://github.com/devDreaming"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className={`text-2xl transition-colors ${
+                  className={`flex items-center gap-3 transition-colors ${
                     isDark
                       ? 'text-white hover:text-indigo-400'
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
                 >
-                  <FaGithub />
+                  <FaGithub className="text-2xl shrink-0" />
+                  <span className="text-base">GitHub</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/hannah-dunteman/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className={`text-2xl transition-colors ${
+                  className={`flex items-center gap-3 transition-colors ${
                     isDark
                       ? 'text-white hover:text-indigo-400'
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
                 >
-                  <FaLinkedin />
+                  <FaLinkedin className="text-2xl shrink-0" />
+                  <span className="text-base">LinkedIn</span>
                 </a>
                 <a
                   href="mailto:hannah.dunteman@gmail.com"
                   aria-label="Email"
-                  className={`text-2xl transition-colors ${
+                  className={`flex items-center gap-3 transition-colors ${
                     isDark
                       ? 'text-white hover:text-indigo-400'
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
                 >
-                  <HiOutlineMail />
+                  <HiOutlineMail className="text-2xl shrink-0" />
+                  <span className="text-base">hannah.dunteman@gmail.com</span>
                 </a>
               </div>
             </div>

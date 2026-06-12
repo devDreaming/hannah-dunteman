@@ -59,7 +59,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
                 textAlign: isCollapsed ? undefined : (scrollProgress > 0 ? 'left' : 'center'),
               }}
             >
-              Hannah Dunteman {!isCollapsed && <span className={subtitleColor} style={{ opacity: contentOpacity }}>| Full Stack Developer</span>}
+              Hannah Dunteman {!isCollapsed && <span className={subtitleColor} style={{ opacity: contentOpacity }}>| Frontend Engineer</span>}
             </h1>
             {!isCollapsed && contentOpacity > 0 && (
               <p

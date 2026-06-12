@@ -9,7 +9,7 @@ export default function Projects() {
       title: 'Watchlist',
       tagline: 'Personal Project',
       description:
-        "A full-stack Movie & TV Show watchlist app. Search for movies and TV shows, track what you want to watch, what you're currently watching, and rate what you complete.",
+        "Full-stack application featuring user authentication, GraphQL APIs, persistent watchlists, ratings, and responsive React interfaces",
       technologies: ['React', 'TypeScript', 'Vite', 'CSS Tokens', 'Apollo Client', 'Prisma', 'GraphQL', 'React Testing Library', 'API Integration'],
       link: 'https://watchlist-client-production.up.railway.app/',
       github: 'https://github.com/devDreaming/watchlist',
@@ -54,7 +54,7 @@ export default function Projects() {
       title: 'Plant Favorites',
       tagline: 'Personal Project',
       description:
-        'Frontend single page application for searching and favoriting plants',
+        'Built a React SPA with API-driven search, state management, favorites persistence, and responsive UI patterns',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind', 'API Integration'],
       link: 'https://devdreaming.github.io/plant-favorites/',
       github: 'https://github.com/devDreaming/plant-favorites',
@@ -110,10 +110,10 @@ export default function Projects() {
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className={`px-3 py-1 rounded-full text-sm ${
+                    className={`px-3 py-1 rounded-full text-sm border ${
                       isDark
-                        ? 'bg-indigo-900 text-indigo-200'
-                        : 'bg-blue-100 text-blue-700'
+                        ? 'border-indigo-900 text-indigo-200'
+                        : 'border-blue-100 text-blue-700'
                     }`}
                   >
                     {tech}

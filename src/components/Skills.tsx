@@ -34,11 +34,11 @@ const skillGroups = [
   },
   {
     label: 'Data & APIs',
-    skills: ['GraphQL', 'Apollo Client', 'Prisma', 'API Integration'],
+    skills: ['REST','GraphQL', 'Apollo Client', 'Prisma'],
   },
   {
     label: 'Tools & Workflow',
-    skills: ['Claude Code', 'Vite', 'Testing', 'Lighthouse', 'Agile'],
+    skills: ['Claude Code', 'Git', 'Vite', 'React Testing Library', 'Lighthouse', 'Agile'],
   },
 ];
 
@@ -66,12 +66,7 @@ export default function Skills() {
               {/* Group label */}
               <div className="md:w-48 flex-shrink-0">
                 <h3
-                  className="text-lg font-bold uppercase tracking-widest bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage: isDark
-                      ? 'linear-gradient(135deg, #818cf8, #a78bfa)'
-                      : 'linear-gradient(135deg, #f6b57e, #f4a6aa)',
-                  }}
+                  className={`text-lg font-bold uppercase tracking-widest ${isDark ? 'text-[#818cf8]' : 'text-gray-900'}`}
                 >
                   {group.label}
                 </h3>

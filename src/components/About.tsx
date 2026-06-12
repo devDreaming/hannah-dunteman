@@ -1,13 +1,14 @@
 import { useTheme } from '../context/ThemeContext';
+import GradientText from './GradientText';
 
 const accomplishments = [
   {
     number: '01',
-    text: <>Rebuilt a browser extension's frontend using <em>React</em>, <em>TypeScript</em>, and <em>Vite</em>, reducing load times and improving user experience</>,
+    text: <>Rebuilt the frontend of a production browser extension using <em>React</em>, <em>TypeScript</em>, and <em>Vite</em>, reducing load times and improving user experience</>,
   },
   {
     number: '02',
-    text: <>Implemented account management features, including wallet and donation functionality, using <em>GraphQL</em> and <em>WebSockets</em> to enable real-time data synchronization</>,
+    text: <>Implemented account management and donation workflows for a production platform using <em>GraphQL</em> and <em>WebSockets</em> to enable real-time data synchronization</>,
   },
   {
     number: '03',
@@ -50,7 +51,7 @@ export default function About() {
         {/* Layout: guitar on left, content on right */}
         <div className="flex flex-col md:flex-row items-end gap-8 md:gap-12">
           {/* Guitar image — lower left, slightly shorter than section */}
-          <div className="hidden md:flex flex-shrink-0 items-end self-end" style={{ width: '160px' }}>
+          <div className="hidden md:flex flex-col flex-shrink-0 items-center self-end" style={{ width: '160px' }}>
             <img
               src={`${import.meta.env.BASE_URL}guitar-outline.svg`}
               alt=""
@@ -64,6 +65,9 @@ export default function About() {
                   : 'sepia(1) saturate(2) hue-rotate(340deg) brightness(0.85)',
               }}
             />
+            <p className={`text-xs text-center mt-2 italic ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+              When I'm not coding,<br />I'm probably playing guitar or listening to heavy metal.
+            </p>
           </div>
 
           {/* Content — offset to the right */}
@@ -71,38 +75,21 @@ export default function About() {
             {/* Intro text */}
             <div className={`text-lg leading-relaxed mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
               <p className="mb-4">
-                For <span className="bg-clip-text text-transparent" style={{
-                    backgroundImage: isDark
-                        ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
-                        : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
-                  }}>
-                     seven years 
-                  </span> software development has been my art
+                For <GradientText>seven years</GradientText> software development has been my art
               </p>
               <p className="mb-4">
-                I have always strived for the <span className="bg-clip-text text-transparent" style={{
-                    backgroundImage: isDark
-                        ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
-                        : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
-                  }}>highest quality work</span>
+                I have always strived for the <GradientText>highest quality work</GradientText>
               </p>
               <p>
-                I believe in crafting good code that performs well, is easy to understand and creates a UI that is both <span className="bg-clip-text text-transparent" style={{
-                    backgroundImage: isDark
-                        ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
-                        : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
-                  }}>visually pleasing</span> and <span className="bg-clip-text text-transparent" style={{
-                    backgroundImage: isDark
-                        ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
-                        : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
-                  }}>accessible</span>
+                I believe in crafting software that is not only <GradientText>performant</GradientText> and <GradientText>accessible</GradientText>, but also <GradientText>consistent</GradientText> and <GradientText>maintainable</GradientText>.
+                Whether working on UI design, component architecture, or application structure, I focus on building systems that can grow without accumulating unnecessary complexity.
               </p>
             </div>
 
             {/* Accomplishments */}
-            {/* <h3 className={`text-sm font-semibold uppercase tracking-widest mb-6 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-              Some accomplishments:
-            </h3> */}
+            <h3 className={`text-sm font-semibold uppercase tracking-widest mb-6 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+              Professional accomplishments:
+            </h3>
             <div className="flex flex-col gap-5">
               {accomplishments.map((item) => (
                 <div
@@ -113,17 +100,10 @@ export default function About() {
                       : 'bg-gray-50 border-gray-200 hover:border-orange-300'
                   }`}
                 >
-                  <span
-                    className="text-2xl font-bold flex-shrink-0 bg-clip-text text-transparent"
-                    style={{
-                      backgroundImage: isDark
-                        ? 'linear-gradient(135deg, #6366f1, #a78bfa)'
-                        : 'linear-gradient(135deg, #ffce6f, #f4a6aa)',
-                    }}
-                  >
-                    {item.number}
+                  <span className="text-2xl font-bold flex-shrink-0">
+                    <GradientText>{item.number}</GradientText>
                   </span>
-                  <p className={`text-[0.9375rem] leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                     {item.text}
                   </p>
                 </div>
