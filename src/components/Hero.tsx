@@ -66,7 +66,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
                 className={`text-lg ${subtitleColor} mb-8 opacity-80`}
                 style={{ opacity: contentOpacity * 0.8 }}
               >
-                Lets build something beautiful and functional
+                Specializing in improving legacy systems, reducing complexity, <br/> and creating maintainable software that supports long-term growth. 
               </p>
             )}
           </div>
