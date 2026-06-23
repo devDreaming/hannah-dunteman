@@ -9,56 +9,56 @@ export default function Projects() {
       title: 'Watchlist',
       tagline: 'Personal Project',
       description:
-        "Full-stack application featuring user authentication, GraphQL APIs, persistent watchlists, ratings, and responsive React interfaces",
-      technologies: ['React', 'TypeScript', 'Vite', 'CSS Tokens', 'Apollo Client', 'Prisma', 'GraphQL', 'React Testing Library', 'API Integration'],
+        "Full-stack application built with React, GraphQL, and Prisma featuring authentication, persistent user watchlists, ratings, and external API integration.",
+      technologies: ['React', 'TypeScript', 'CSS Tokens', 'Apollo Client', 'Prisma', 'GraphQL', 'React Testing Library'],
       link: 'https://watchlist-client-production.up.railway.app/',
       github: 'https://github.com/devDreaming/watchlist',
-    },
-    {
-      title: 'What\'s For Dinner',
-      tagline: 'Personal Project',
-      description:
-        'Full stack application that utilizes Anthropic AI to help pick dinner options',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Express', 'Node.js', 'Anthropic AI'],
-      link: 'https://whats-for-dinner.up.railway.app/',
-      github: 'https://github.com/devDreaming/whats-for-dinner',
-    },
-    {
-      title: 'Modern Dentist',
-      tagline: 'Personal Project',
-      description:
-        'Multi-page marketing site for a dental practice, built based on a Figma design with responsive layouts and modern UI components',
-      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Jest'],
-      link: 'https://modern-dentist.vercel.app/',
-      github: 'https://github.com/devDreaming/modern-dentist',
-    },
-    {
-      title: 'Daily Audio Bible',
-      tagline: 'Client Project',
-      description:
-        'Implemented a full site redesign, rebuilt menu, added account page wallet and donation management, used graphQL and websockets to sync information between apps',
-      technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'WebSockets'],
-      link: 'https://dailyaudiobible.com/',
-      github: '',
     },
     {
       title: 'Accessible Component Library',
       tagline: 'Personal Project',
       description:
-        'A showcase of accessible UI components',
+        'Collection of reusable React components implementing keyboard navigation, ARIA patterns, semantic HTML, and accessible interaction states.',
       technologies: ['HTML', 'ARIA', 'CSS Tokens', 'React', 'Vite'],
       link: 'https://devdreaming.github.io/accessible-components/',
       github: 'https://github.com/devDreaming/accessible-components',
     },
+    // {
+    //   title: 'What\'s For Dinner',
+    //   tagline: 'Personal Project',
+    //   description:
+    //     'Full stack application that utilizes Anthropic AI to help pick dinner options',
+    //   technologies: ['React', 'TypeScript', 'Tailwind', 'Express', 'Node.js', 'Anthropic AI'],
+    //   link: 'https://whats-for-dinner.up.railway.app/',
+    //   github: 'https://github.com/devDreaming/whats-for-dinner',
+    // },
     {
-      title: 'Plant Favorites',
+      title: 'Modern Dentist',
       tagline: 'Personal Project',
       description:
-        'Built a React SPA with API-driven search, state management, favorites persistence, and responsive UI patterns',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind', 'API Integration'],
-      link: 'https://devdreaming.github.io/plant-favorites/',
-      github: 'https://github.com/devDreaming/plant-favorites',
+        'Responsive Next.js marketing site built from a Figma design, emphasizing reusable components, accessibility, and modern frontend architecture.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Jest'],
+      link: 'https://modern-dentist.vercel.app/',
+      github: 'https://github.com/devDreaming/modern-dentist',
     },
+    // {
+    //   title: 'Daily Audio Bible',
+    //   tagline: 'Client Project',
+    //   description:
+    //     'Client project involving a full site redesign, account management features, donation workflows, GraphQL integrations, and real-time synchronization using WebSockets.',
+    //   technologies: ['HTML', 'SCSS', 'Javascript', 'PHP', 'WordPress', 'GraphQL', 'WebSockets'],
+    //   link: 'https://dailyaudiobible.com/',
+    //   github: '',
+    // },
+    // {
+    //   title: 'Plant Favorites',
+    //   tagline: 'Personal Project',
+    //   description:
+    //     'React SPA featuring API-driven search, client-side state management, favorites persistence, and responsive UI patterns.',
+    //   technologies: ['React', 'TypeScript', 'Vite', 'Tailwind'],
+    //   link: 'https://devdreaming.github.io/plant-favorites/',
+    //   github: 'https://github.com/devDreaming/plant-favorites',
+    // },
     // {
     //   title: 'Rock Paper Scissors Game',
     //   tagline: 'Personal Project',
@@ -80,10 +80,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className={`py-20 scroll-mt-20 ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}>
+    <section id="projects" className={`py-20 scroll-mt-20 min-h-[calc(100vh-4rem)] flex flex-col justify-center ${isDark ? 'bg-gray-800' : 'bg-blue-50'}`}>
       <div className="container mx-auto px-6">
         <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
-          Projects
+          Personal Projects
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" style={{ gridAutoRows: '1fr' }}>
@@ -99,9 +99,9 @@ export default function Projects() {
               <h3 className={`text-2xl font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {project.title}
               </h3>
-              <p className={`text-sm mb-3 ${isDark ? 'text-indigo-400' : 'text-blue-600'}`}>
+              {/* <p className={`text-sm mb-3 ${isDark ? 'text-indigo-400' : 'text-blue-600'}`}>
                 {project.tagline}
-              </p>
+              </p> */}
               <p className={`mb-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 {project.description}
               </p>

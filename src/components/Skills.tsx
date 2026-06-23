@@ -49,7 +49,7 @@ export default function Skills() {
   let colorIndex = 0;
 
   return (
-    <section id="skills" className={`relative py-20 scroll-mt-20 overflow-hidden min-h-[calc(100vh-4rem)] ${isDark ? 'bg-gray-900' : 'bg-stone-50'}`}>
+    <section id="skills" className={`relative py-20 scroll-mt-20 overflow-hidden min-h-[calc(100vh-4rem)] flex flex-col justify-center ${isDark ? 'bg-gray-900' : 'bg-stone-50'}`}>
       <GrowingVine isDark={isDark} />
 
       <div className="container mx-auto px-6 relative z-10">

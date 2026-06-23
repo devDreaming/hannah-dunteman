@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import ProfessionalWork from './components/ProfessionalWork';
 import Contact from './components/Contact';
 
 function AppContent() {
@@ -27,6 +28,7 @@ function AppContent() {
       <Hero scrollProgress={scrollProgress} />
       <main className="relative z-10 pt-[100vh]">
         <About />
+        <ProfessionalWork />
         <Projects />
         <Skills />
         <Contact />

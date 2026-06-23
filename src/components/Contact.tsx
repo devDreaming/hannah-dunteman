@@ -19,17 +19,17 @@ export default function Contact() {
       />
       <div className="container mx-auto px-6 relative z-10">
         <h2 className={`text-4xl font-bold mb-12 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
-          Get In Touch
+          Contact
         </h2>
 
         <div className="max-w-2xl mx-auto">
-          <div className={`rounded-lg shadow-md p-6 border backdrop-blur-sm ${
+          <div className={`rounded-lg shadow-md p-10 border backdrop-blur-sm ${
                 isDark
                   ? 'bg-gray-900/80 border-gray-700'
                   : 'bg-white/80 border-gray-200'
               }`}>
             <p className={`mb-4 text-center text-xl ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              The next step in our journey awaits
+              Interested in working together? Let's connect.
             </p>
 
             <div className={`mt-6 pt-6 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>

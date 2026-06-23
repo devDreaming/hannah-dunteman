@@ -82,6 +82,12 @@ export default function Hero({ scrollProgress }: HeroProps) {
                   About
                 </a>
                 <a
+                  href="#professional-work"
+                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                >
+                  Highlights
+                </a>
+                <a
                   href="#projects"
                   className={`${textColor} hover:opacity-80 transition-opacity`}
                 >
@@ -126,6 +132,13 @@ export default function Hero({ scrollProgress }: HeroProps) {
               About
             </a>
             <a
+              href="#professional-work"
+              className={`${textColor} hover:opacity-80 transition-opacity`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Highlights
+            </a>
+            <a
               href="#projects"
               className={`${textColor} hover:opacity-80 transition-opacity`}
               onClick={() => setMenuOpen(false)}
@@ -164,14 +177,14 @@ export default function Hero({ scrollProgress }: HeroProps) {
                 About Me
               </a>
               <a
-                href="#projects"
+                href="#professional-work"
                 className={`border-2 border-white ${textColor} px-8 py-3 rounded-lg font-semibold transition-colors ${
                   isDark
                     ? 'hover:bg-white hover:text-indigo-900'
                     : 'hover:bg-white hover:text-orange-600'
                 }`}
               >
-                View Projects
+                Professional Highlights
               </a>
             </div>
 
