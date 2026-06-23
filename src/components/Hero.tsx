@@ -66,7 +66,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
                 className={`text-lg ${subtitleColor} mb-8 opacity-80`}
                 style={{ opacity: contentOpacity * 0.8 }}
               >
-                Specializing in improving legacy systems, reducing complexity, <br/> and creating maintainable software that supports long-term growth. 
+                Building software that stays fast, accessible, and maintainable as it grows.
               </p>
             )}
           </div>
@@ -77,31 +77,31 @@ export default function Hero({ scrollProgress }: HeroProps) {
               <nav className="hidden md:flex gap-6 items-center">
                 <a
                   href="#about"
-                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                  className={`${textColor} hover:opacity-80 transition-opacity text-center`}
                 >
-                  About
+                  About Me
                 </a>
                 <a
                   href="#professional-work"
-                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                  className={`${textColor} hover:opacity-80 transition-opacity text-center`}
                 >
-                  Highlights
+                  Professional Highlights
                 </a>
                 <a
                   href="#projects"
-                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                  className={`${textColor} hover:opacity-80 transition-opacity text-center`}
                 >
-                  Projects
+                  Personal Projects
                 </a>
                 <a
                   href="#skills"
-                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                  className={`${textColor} hover:opacity-80 transition-opacity text-center`}
                 >
                   Skills
                 </a>
                 <a
                   href="#contact"
-                  className={`${textColor} hover:opacity-80 transition-opacity`}
+                  className={`${textColor} hover:opacity-80 transition-opacity text-center`}
                 >
                   Contact
                 </a>
@@ -129,21 +129,21 @@ export default function Hero({ scrollProgress }: HeroProps) {
               className={`${textColor} hover:opacity-80 transition-opacity`}
               onClick={() => setMenuOpen(false)}
             >
-              About
+              About Me
             </a>
             <a
               href="#professional-work"
               className={`${textColor} hover:opacity-80 transition-opacity`}
               onClick={() => setMenuOpen(false)}
             >
-              Highlights
+              Professional Highlights
             </a>
             <a
               href="#projects"
               className={`${textColor} hover:opacity-80 transition-opacity`}
               onClick={() => setMenuOpen(false)}
             >
-              Projects
+              Personal Projects
             </a>
             <a
               href="#skills"

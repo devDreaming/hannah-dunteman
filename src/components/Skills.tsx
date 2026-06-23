@@ -29,8 +29,8 @@ const skillGroups = [
     skills: ['React', 'Next.js', 'Laravel', 'jQuery', 'Node.js', 'Express'],
   },
   {
-    label: 'Styling & UI',
-    skills: ['CSS Tokens', 'Tailwind', 'Bootstrap', 'ARIA', 'Figma'],
+    label: 'Styling, UI & Accessibility',
+    skills: ['CSS Tokens', 'Tailwind', 'Bootstrap', 'ARIA', 'WCAG', 'Figma'],
   },
   {
     label: 'Data & APIs',
@@ -38,7 +38,7 @@ const skillGroups = [
   },
   {
     label: 'Tools & Workflow',
-    skills: ['Claude Code', 'Git', 'Vite', 'React Testing Library', 'Lighthouse', 'Agile'],
+    skills: ['Git', 'Vite', 'React Testing Library', 'Lighthouse', 'Claude Code'],
   },
 ];
 
